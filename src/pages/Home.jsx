@@ -14,7 +14,6 @@ import {
 
 
 import first from "@/images/1.jpeg";
-// import second from "@/images/2.jpeg";
 import three from "@/images/3.jpeg";
 import quatro from "@/images/4.jpeg";
 import cinco from "@/images/5.jpeg";
