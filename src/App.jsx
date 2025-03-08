@@ -9,7 +9,7 @@ export default function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="maestro">
       <HelmetProvider>
-        <Helmet title="Maestro &#8482;" />
+        <Helmet title="CM Manutenção Industrial &#8482;" />
         <RouterProvider router={router} />
       </HelmetProvider>
     </ThemeProvider>
