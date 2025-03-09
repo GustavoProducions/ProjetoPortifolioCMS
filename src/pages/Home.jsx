@@ -9,7 +9,8 @@ import {
     CarouselNext,
     CarouselPrevious
 } from '@/components/ui/carousel';
-import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardTitle, CardFooter } from '@/components/ui/card';
+import { Facebook, Instagram, Twitter, MapPin, Mail } from "lucide-react";
 
 import um from '@/images/1.jpeg';
 import dois from '@/images/2.jpeg';
@@ -299,6 +300,47 @@ export function Home() {
                     </CardContent>
                 </Card>
             </motion.div>
+            <motion.div
+                id="footer"
+                className="pt-[100px] space-y-8 gap-10 mx-auto p-6 max-w-[1600px] px-6 min-h-screen"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
+                <Card className="w-full bg-gray-900 text-white">
+                    <CardFooter className="flex justify-between space-x-4 py-4">
+
+                        <a
+                            href="https://maps.app.goo.gl/eNsgqdTycrdymSpV7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center space-x-2 hover:text-gray-400"
+                        >
+                            <MapPin size={20} className="text-red-500" />
+                            <span>R. Antonio Carlos Paiva Camelo, 274 - Jardim Paraiso,
+                                Cajamar - SP</span>
+                        </a>
+
+                        <a href="#" className="hover:text-gray-400">
+                            <Facebook size={24} />
+                        </a>
+                        <a href="#" className="hover:text-gray-400">
+                            <Instagram size={24} />
+                        </a>
+                        <a href="#" className="hover:text-gray-400">
+                            <Twitter size={24} />
+                        </a>
+                        <a
+                            href="manutecao.cezarmendes@gmail.com"
+                            className="hover:text-gray-400 flex items-center space-x-2"
+                        >
+                            <Mail size={24} className="text-blue-500" />
+                            <span>manutecao.cezarmendes@gmail.com.</span>
+                        </a>
+                    </CardFooter>
+                </Card>
+            </motion.div>
         </div>
+
     );
 }
