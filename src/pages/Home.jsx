@@ -11,7 +11,7 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel';
 import { Card, CardContent, CardTitle, CardFooter } from '@/components/ui/card';
-import { Facebook, Instagram, Twitter, MapPin, Mail } from "lucide-react";
+import { Facebook, Instagram, Twitter, MapPin, Mail } from 'lucide-react';
 
 import um from '@/images/1.jpeg';
 import dois from '@/images/2.jpeg';
@@ -67,7 +67,7 @@ export function Home() {
   return (
     <div>
       <header className="fixed top-0 left-0 w-full z-50 bg-gray-200 h-[160px] shadow-lg">
-        <div className="flex justify-between items-center max-w-screen-lg mx-auto">
+        <div className="flex justify-between items-center max-w-screen-lg mx-auto px-4">
           <motion.h1
             className="text-2xl font-bold flex-shrink-0"
             initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ export function Home() {
             <img
               src={logo}
               alt="Logo RTL Rolamentos"
-              className="w-56 h-auto object-cover "
+              className="w-56 h-auto object-cover"
             />
           </motion.h1>
           <nav className="hidden md:flex space-x-6">
@@ -88,20 +88,21 @@ export function Home() {
             </Link>
             <Link to="servicos" smooth={true} duration={500}>
               <Button variant="ghost" className="text-[16px]">
-                Serviços
+                Peças disponíveis
               </Button>
             </Link>
-            <Link to="quem-somos" smooth={true} duration={500}>
+            {/* <Link to="quem-somos" smooth={true} duration={500}>
               <Button variant="ghost" className="text-[16px]">
                 Quem Somos
               </Button>
-            </Link>
+            </Link> */}
             <Link to="contato" smooth={true} duration={500}>
               <Button variant="ghost" className="text-[16px]">
                 Contato
               </Button>
             </Link>
           </nav>
+          {/* Menu móvel */}
           <div className="md:hidden">
             <Button variant="ghost" onClick={toggleMenu}>
               <AlignJustify size={30} />
@@ -120,10 +121,10 @@ export function Home() {
           </Link>
           <Link to="servicos" smooth={true} duration={500} onClick={toggleMenu}>
             <Button variant="ghost" className="text-white text-2xl mb-4">
-              Serviços
+              Peças disponíveis
             </Button>
           </Link>
-          <Link
+          {/* <Link
             to="quem-somos"
             smooth={true}
             duration={500}
@@ -132,7 +133,7 @@ export function Home() {
             <Button variant="ghost" className="text-white text-2xl mb-4">
               Quem Somos
             </Button>
-          </Link>
+          </Link> */}
           <Link to="contato" smooth={true} duration={500} onClick={toggleMenu}>
             <Button variant="ghost" className="text-white text-2xl mb-4">
               Contato
@@ -148,10 +149,8 @@ export function Home() {
         transition={{ duration: 1 }}
         style={{ background: 'linear-gradient(to bottom, #2893B3, white)' }}
       >
-        <Card className="relative overflow-hidden w-full">
-          {' '}
-          {/* Adicione w-full aqui */}
-          <CardContent className=" flex flex-col md:flex-row items-stretch relative z-10 h-full">
+        <Card className="relative overflow-hidden w-full border-none">
+          <CardContent className="flex flex-col md:flex-row items-stretch relative z-10 h-full">
             <div className="md:w-1/2 w-full flex-1 h-[350px] relative z-20 p-4 sm:p-6 bg-white rounded-lg flex flex-col justify-between">
               <div>
                 <span className="text-[22px] sm:text-[25px]">
@@ -200,16 +199,16 @@ export function Home() {
 
       <motion.div
         id="servicos"
-        className="max-w-auto"
+        className="max-w-auto mt-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <Card>
+        <Card className="border-none">
           <CardContent>
-            {/* <CardTitle className="text-[#2893B3] text-center mb-14 text-[25px]">
+            <CardTitle className="text-[#2893B3] text-center mb-14 text-[25px]">
               Lista de Peças disponíveis
-            </CardTitle> */}
+            </CardTitle>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
               {imagens.map((item, index) => (
                 <Card
@@ -252,46 +251,113 @@ export function Home() {
           </CardContent>
         </Card>
       </motion.div>
+
       <motion.div
-                id="footer"
-                className="pt-[100px] space-y-8 gap-10 mx-auto p-6 max-w-[1600px] px-6 min-h-screen"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+        id="contato"
+        className="max-w-[500px] mt-10 mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Card className="border-none">
+          <CardContent>
+            <CardTitle className="text-[#2893B3] text-center mb-14 text-[25px]">
+              Contato
+            </CardTitle>
+            <form className="space-y-6">
+              <div className="flex flex-col">
+                <label htmlFor="name" className="text-[#2893B3] mb-2">
+                  Nome
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]"
+                  placeholder="Seu nome"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="email" className="text-[#2893B3] mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]"
+                  placeholder="Seu email"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="message" className="text-[#2893B3] mb-2">
+                  Mensagem
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]"
+                  placeholder="Sua mensagem"
+                  rows="5"
+                ></textarea>
+              </div>
+              <Button variant="default" className="w-full sm:w-auto">
+                Enviar
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </motion.div>
+      <motion.div
+        id="footer"
+        className="pt-[100px] mx-auto "
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Card className="w-full bg-gray-900 text-white">
+          <CardFooter className="flex flex-wrap justify-between items-center w-full py-4">
+            <a
+              href="https://maps.app.goo.gl/eNsgqdTycrdymSpV7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center hover:text-gray-400 w-full sm:w-auto sm:mb-0"
             >
-                <Card className="w-full bg-gray-900 text-white">
-                    <CardFooter className="flex justify-between space-x-4 py-4">
+              <MapPin size={20} className="text-red-500" />
+              <span className="text-sm sm:text-base">
+                R. Antonio Carlos Paiva Camelo, 274 - Jardim Paraiso, Cajamar -
+                SP
+              </span>
+            </a>
+            <div className="mt-8 text-center text-sm text-gray-400">
+              <span>
+                &copy; 2025 CM Manutenção. Todos os direitos reservados.
+              </span>
+            </div>
 
-                        <a
-                            href="https://maps.app.goo.gl/eNsgqdTycrdymSpV7"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-2 hover:text-gray-400"
-                        >
-                            <MapPin size={20} className="text-red-500" />
-                            <span>R. Antonio Carlos Paiva Camelo, 274 - Jardim Paraiso,
-                                Cajamar - SP</span>
-                        </a>
-
-                        <a href="#" className="hover:text-gray-400">
-                            <Facebook size={24} />
-                        </a>
-                        <a href="#" className="hover:text-gray-400">
-                            <Instagram size={24} />
-                        </a>
-                        <a href="#" className="hover:text-gray-400">
-                            <Twitter size={24} />
-                        </a>
-                        <a
-                            href="manutecao.cezarmendes@gmail.com"
-                            className="hover:text-gray-400 flex items-center space-x-2"
-                        >
-                            <Mail size={24} className="text-blue-500" />
-                            <span>manutecao.cezarmendes@gmail.com.</span>
-                        </a>
-                    </CardFooter>
-                </Card>
-            </motion.div>
-        </div>
-    );
+            <div className="flex space-x-4 w-full sm:w-auto justify-center sm:justify-start">
+              <a href="#" className="hover:text-gray-400">
+                <Facebook size={24} />
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                <Instagram size={24} />
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                <Twitter size={24} />
+              </a>
+              <a
+                href="mailto:manutecao.cezarmendes@gmail.com"
+                className="hover:text-gray-400 flex items-center space-x-2"
+              >
+                <Mail size={24} className="text-blue-500" />
+                <span className="text-sm sm:text-base">
+                  manutecao.cezarmendes@gmail.com
+                </span>
+              </a>
+            </div>
+          </CardFooter>
+        </Card>
+      </motion.div>
+    </div>
+  );
 }
