@@ -1,9 +1,8 @@
-import { Helmet, HelmetProvider } from 'react-helmet-async'
-import { RouterProvider } from 'react-router-dom'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { RouterProvider } from 'react-router-dom';
 
-
-import { ThemeProvider } from './components/theme-provider'
-import { router } from './router'
+import { ThemeProvider } from './components/theme-provider';
+import { router } from './router';
 
 export default function App() {
   return (
@@ -13,5 +12,5 @@ export default function App() {
         <RouterProvider router={router} />
       </HelmetProvider>
     </ThemeProvider>
-  )
+  );
 }
