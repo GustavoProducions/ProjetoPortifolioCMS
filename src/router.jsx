@@ -1,5 +1,6 @@
 import { createHashRouter } from 'react-router-dom';
 import { Home } from './pages/Home';
+import { Usinagem } from './pages/Usinagem';
 // import { NotFoundPage } from '@/pages/not-found/page';
 
 export const router = createHashRouter([
@@ -8,8 +9,8 @@ export const router = createHashRouter([
     element: <Home />,
     children: [
       {
-        path: '/',
-        element: <Home />
+        path: '/usinagem',
+        element: <Usinagem />
       }
     ]
   },
