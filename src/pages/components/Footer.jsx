@@ -1,48 +1,81 @@
 import { Card, CardFooter } from '@/components/ui/card';
-import { Facebook, Instagram, Twitter, MapPin, Mail } from 'lucide-react';
+import { Facebook, Instagram, Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <Card className="w-full h-[300px] bg-gray-900 text-white">
-      <CardFooter className="flex flex-wrap justify-between items-center w-full py-4">
-        <a
-          href="https://maps.app.goo.gl/eNsgqdTycrdymSpV7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center hover:text-gray-400 w-full sm:w-auto sm:mb-0"
-        >
-          <MapPin size={20} className="text-red-500" />
-          <span className="text-sm sm:text-base">
-            R. Antonio Carlos Paiva Camelo, 274 - Jardim Paraiso, Cajamar - SP
-          </span>
-        </a>
-        <div className="mt-8 text-center text-sm text-gray-400">
-          <span>&copy; 2025 CM Manutenção. Todos os direitos reservados.</span>
+    <Card className="w-full bg-gray-900 text-white">
+      <CardFooter className="footer-container py-4 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-screen-xl mx-auto md:h-[500px]">
+        {/* Seção de Contato */}
+        <div className="footer-section">
+          <h3 className="footer-title text-xl font-semibold mt-4">Contato</h3>
+          <ul className="text-sm text-gray-400 space-y-2 mt-5">
+
+            {/* E-mail */}
+            <li>
+              <a href="mailto:manutecao.cezarmendes@gmail.com" className="hover:text-gray-400 flex items-center space-x-2">
+                <Mail size={24} className="text-blue-500" />
+                <span className="text-sm sm:text-base">manutecao.cezarmendes@gmail.com</span>
+              </a>
+            </li>
+
+            {/* Facebook */}
+            <li>
+              <a href="https://facebook.com" className="hover:text-gray-400 flex items-center space-x-2">
+                <Facebook size={24} />
+                <span className="text-sm sm:text-base">Facebook</span>
+              </a>
+            </li>
+
+            {/* Instagram */}
+            <li>
+              <a href="https://instagram.com" className="hover:text-gray-400 flex items-center space-x-2">
+                <Instagram size={24} />
+                <span className="text-sm sm:text-base">Instagram</span>
+              </a>
+            </li>
+
+            {/* WhatsApp */}
+            <li>
+              <a href="https://wa.me/5511915659594" className="hover:text-gray-400 flex items-center space-x-2">
+                <Phone size={24} className="text-green-500" />
+                <span className="text-sm sm:text-base">Whatsapp</span>
+              </a>
+            </li>
+
+          </ul>
         </div>
 
-        <div className="flex space-x-4 w-full sm:w-auto justify-center sm:justify-start">
-          <a href="#" className="hover:text-gray-400">
-            <Facebook size={24} />
-          </a>
-          <a href="#" className="hover:text-gray-400">
-            <Instagram size={24} />
-          </a>
-          <a href="#" className="hover:text-gray-400">
-            <Twitter size={24} />
-          </a>
-          <a
-            href="mailto:manutecao.cezarmendes@gmail.com"
-            className="hover:text-gray-400 flex items-center space-x-2"
-          >
-            <Mail size={24} className="text-blue-500" />
-            <span className="text-sm sm:text-base">
-              manutecao.cezarmendes@gmail.com
-            </span>
-          </a>
+
+        {/* Seção de Navegação */}
+        <div className="footer-section">
+          <h3 className="footer-title text-xl font-semibold mb-7">Navegação</h3>
+          <ul className="text-l text-gray-400">
+            <li><a href="/" className="hover:text-gray-400">Home</a></li>
+            <li><a href="/about" className="hover:text-gray-400">Sobre</a></li>
+            <li><a href="/services" className="hover:text-gray-400">Serviços</a></li>
+            <li><a href="/contact" className="hover:text-gray-400">Contato</a></li>
+          </ul>
         </div>
+        <div className="footer-section">
+          <h3 className="footer-title text-xl font-semibold">Sobre nós</h3>
+          <p className="text-l text-gray-400 mt-10">
+            Somos uma empresa especializada em manutenção e serviços de alta qualidade. Nossa missão é garantir a satisfação dos nossos clientes com soluções eficientes e personalizadas.
+          </p>
+        </div>
+
       </CardFooter>
+
+      {/* Separador de conteúdo */}
+      <hr className="border-t border-gray-700 mx-auto w-1/2 my-4" />
+
+      {/* Copyright */}
+      <div className="footer-copyright bg-transparent text-center text-sm text-gray-400 py-4">
+        <span>&copy; 2025 CM Manutenção. Todos os direitos reservados.</span>
+      </div>
     </Card>
   );
 };
 
+
 export default Footer;
+
