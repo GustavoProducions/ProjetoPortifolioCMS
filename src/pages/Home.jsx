@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '@/components/ui/carousel';
+import Typical from 'react-typical';
 import { Card, CardContent, CardTitle, CardFooter } from '@/components/ui/card';
 import Footer from './components/Footer';
 import um from '@/images/1.jpeg';
@@ -19,8 +20,8 @@ import seis from '@/images/6.jpeg';
 import sete from '@/images/7.jpeg';
 import oito from '@/images/8.jpeg';
 import logo from '@/images/logoCM.png';
-// import manutencao from '@/images/manutencao.webp';
-// import usinagem from '@/images/usinagem.jpg';
+import manutencao from '@/images/manutencao.webp';
+import usinagem from '@/images/usinagem.jpg';
 import teste1 from '@/images/teste/engrenagem3.webp';
 import teste2 from '@/images/teste/engrenbagem.webp';
 import teste3 from '@/images/teste/rol,amento3.jpg';
@@ -41,12 +42,27 @@ const imagens = [
   teste8
 ];
 const images = [
-  { src: um, alt: 'Usinagem' },
-  { src: dois, alt: 'Manutenção' },
-  { src: quatro, alt: 'Usinagem' },
-  { src: seis, alt: 'Manutenção' },
-  { src: sete, alt: 'Usinagem' },
-  { src: oito, alt: 'Manutenção' }
+  {
+    src: usinagem,
+    alt: 'Usinagem',
+    title: 'Usinagem',
+    text: 'A Cezar Mendes possui procedimentos e ações que norteiam e capacitam seus serviços.',
+    buttonText: 'Saiba mais'
+  },
+  {
+    src: um,
+    alt: 'Manutenção',
+    title: 'Manutenção',
+    text: 'A manutenção industrial é essencial para garantir a eficiência e segurança das operações, prevenindo falhas e minimizando o tempo de inatividade.',
+    buttonText: 'Saiba mais'
+  },
+  {
+    src: manutencao,
+    alt: 'Serviços',
+    title: 'Usinagem',
+    text: 'Texto para Usinagem 2',
+    buttonText: 'Saiba mais'
+  }
 ];
 
 export function Home() {
@@ -86,6 +102,11 @@ export function Home() {
               </Button>
             </Link>
             <Link to="servicos" smooth={true} duration={500}>
+              <Button variant="ghost" className="text-[16px]">
+                Serviços
+              </Button>
+            </Link>
+            <Link to="pecas" smooth={true} duration={500}>
               <Button variant="ghost" className="text-[16px]">
                 Peças disponíveis
               </Button>
@@ -142,50 +163,41 @@ export function Home() {
       </div>
       <motion.div
         id="home"
-        className="pt-[200px] sm:pt-[180px] md:pt-[200px] space-y-8 gap-10 mx-auto p-4 sm:p-6"
+        className="pt-[200px] sm:pt-[180px] md:pt-[160px]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        style={{ background: 'linear-gradient(to bottom, #2893B3, white)' }}
+        // style={{ background: 'linear-gradient(to bottom, #2893B3, white)' }}
       >
-        <Card className="relative overflow-hidden w-full border-none">
-          <CardContent className="flex flex-col md:flex-row items-stretch relative z-10 h-full">
-            <div className="md:w-1/2 w-full flex-1 h-[350px] relative z-20 p-4 sm:p-6 bg-white rounded-lg flex flex-col justify-between">
-              <div>
-                <span className="text-[22px] sm:text-[25px]">
-                  Experiência e Inovação em um só lugar:
-                  <br />
-                  <br />
-                </span>
-                <span className="text-base sm:text-lg">
-                  Na CM Manutenção Industrial, somos especialistas em fornecer
-                  soluções completas e inovadoras para a manutenção industrial e
-                  usinagem. Com anos de experiência no mercado, nossa missão é
-                  garantir a máxima eficiência e desempenho dos equipamentos
-                  industriais de nossos clientes.
-                </span>
-              </div>
-              <Button
-                variant="default"
-                className="mt-10 md:mt-3 w-full sm:w-40"
-              >
-                Solicite seu orçamento
-              </Button>
-            </div>
-            <div className="md:w-1/2 w-full flex-1 relative z-20 block">
-              <Carousel className="w-full">
+        <Card className="relative w-full border-none">
+          <CardContent className="flex flex-col relative z-10 h-full p-0">
+            <div className="w-full flex-1 relative z-20 block">
+              <Carousel className="w-full" interval={10000}>
                 <CarouselContent>
                   {images.map((image, index) => (
                     <CarouselItem
                       key={index}
                       className={`h-full ${index === currentIndex ? 'block' : 'hidden'}`}
                     >
-                      <div className="w-full h-[250px] sm:h-[350px]">
+                      <div className="w-full h-[650px] sm:h-[500px] md:h-[700px]">
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="object-cover"
+                          className="object-cover w-full h-full opacity-80"
                         />
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50 text-white text-center">
+                        <h5 className="text-[30px] font-bold">{image.title}</h5>
+                        <h2 className="text-lg font-bold">
+                          <Typical
+                            steps={[image.text, 1000]}
+                            loop={1}
+                            wrapper="span"
+                          />
+                        </h2>
+                        <Button className="mt-2 px-4 py-2 text-white rounded">
+                          {image.buttonText}
+                        </Button>
                       </div>
                     </CarouselItem>
                   ))}
@@ -195,25 +207,83 @@ export function Home() {
           </CardContent>
         </Card>
       </motion.div>
-
       <motion.div
         id="servicos"
-        className="max-w-auto mt-10"
+        className="max-w-auto mt-16"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <Card className="border-none">
           <CardContent>
-            <CardTitle className="text-[#2893B3] text-center mb-14 text-[25px]">
+            <CardTitle className="text-[#2893B3] text-center mb-20 text-[33px]">
               Lista de Peças disponíveis
+              <hr />
             </CardTitle>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
               {imagens.map((item, index) => (
                 <Card
                   key={index}
-                  className="transform transition-transform duration-300 hover:scale-105"
+                  className="relative transform transition-transform duration-300 hover:scale-105 hover:-translate-y-5"
                 >
+                  <div className="absolute top-0 left-0 w-full h-1 bg-[#2893B3] scale-x-0 transition-transform duration-300 hover:scale-x-100"></div>
+                  <CardContent className="flex justify-center items-center">
+                    <img
+                      src={item}
+                      alt={`Imagem ${index + 1}`}
+                      className="w-[60%] h-[60%] object-cover rounded-lg"
+                    />
+                  </CardContent>
+                  <CardFooter>Nomes das peças</CardFooter>
+                </Card>
+              ))}
+            </div>
+            <div className="md:hidden">
+              <Carousel
+                opts={{ align: 'start', perPage: 1 }}
+                className="overflow-hidden"
+              >
+                <CarouselContent>
+                  {imagens.map((img, index) => (
+                    <CarouselItem key={index} className="flex gap-4">
+                      <div className="rounded-lg overflow-hidden w-full h-[90px]:">
+                        <img
+                          src={img}
+                          alt={`Imagem ${index + 1}`}
+                          className="w-full h-40 object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
+
+      <motion.div
+        id="pecas"
+        className="max-w-auto mt-16"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Card className="border-none">
+          <CardContent>
+            <CardTitle className="text-[#2893B3] text-center mb-20 text-[33px]">
+              Lista de Peças disponíveis
+              <hr />
+            </CardTitle>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
+              {imagens.map((item, index) => (
+                <Card
+                  key={index}
+                  className="relative transform transition-transform duration-300 hover:scale-105 hover:-translate-y-5"
+                >
+                  <div className="absolute top-0 left-0 w-full h-1 bg-[#2893B3] scale-x-0 transition-transform duration-300 hover:scale-x-100"></div>
                   <CardContent className="flex justify-center items-center">
                     <img
                       src={item}
