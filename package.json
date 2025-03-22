@@ -12,9 +12,9 @@
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.5",
     "react-infinite-scroll-component": "^6.1.0",
-    "react-router-dom": "^7.3.0",
+    "react-router-dom": "^7.4.0",
     "react-scroll": "^1.9.3",
-    "tailwind-merge": "^2.6.0",
+    "tailwind-merge": "^2.6.0",  
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
