@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import whats from '@/images/icons8-whatsapp.svg';
 
-const WhatsAppButton = () => {
+const WhatsAppButton = ({ name }) => {
   const message = 'Olá, gostaria de mais informações sobre os serviços.'; // Mensagem prefixa
   const encodedMessage = encodeURIComponent(message);
+  const Peca = name;
 
   return (
     <motion.div

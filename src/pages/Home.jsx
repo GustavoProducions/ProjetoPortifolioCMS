@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AlignJustify } from 'lucide-react';
 // import ContactForm from './SubPages/Contato';
@@ -38,7 +39,7 @@ export function Home() {
             />
           </motion.h1>
           <nav className="hidden md:flex space-x-6">
-            <Link to="home" smooth={true} duration={500}>
+            <Link to="/home" smooth={true} duration={500}>
               <Button variant="ghost" className="text-[16px]">
                 Home
               </Button>
@@ -53,7 +54,7 @@ export function Home() {
                 Peças disponíveis
               </Button>
             </Link>
-            <Link to="contato" smooth={true} duration={500}>
+            <Link to="/contato" smooth={true} duration={500}>
               <Button variant="ghost" className="text-[16px]">
                 Contato
               </Button>
