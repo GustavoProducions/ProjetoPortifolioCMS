@@ -1,7 +1,8 @@
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import Navbar from '../components/navbar';
-import { Card, CardContent, CardTitle } from '@/components/ui/card';
 // import fotos1 from '../../images/1.jpeg';
 // import fotos2 from '../../images/2.jpeg';
 // import fotos3 from '../../images/3.jpeg';
@@ -22,7 +23,6 @@ import pecas5 from '../../images/pecas/peca1.jpeg';
 import pecas6 from '../../images/pecas/peca2.jpeg';
 import pecas7 from '../../images/pecas/peca3.jpeg';
 import pecas8 from '../../images/pecas/peca4.jpeg';
-import { Button } from '@/components/ui/button';
 
 const imagens = [
   { src: pecas1, texto: 'Nome da peça', nome: 'Imagem 2' },
