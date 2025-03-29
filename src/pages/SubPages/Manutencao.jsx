@@ -4,8 +4,12 @@ import Footer from '../components/Footer';
 import Navbar from '../components/navbar';
 import maquina1 from '../../images/maquinapage.jpg';
 import maquina2 from '../../images/maquinapage2.jpg';
+import { useEffect } from 'react';
 
 const Manutencoes = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />

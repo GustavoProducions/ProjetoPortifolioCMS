@@ -18,7 +18,7 @@ import pecas1 from '../../images/pecas/peca1.jpeg';
 import pecas2 from '../../images/pecas/peca2.jpeg';
 import pecas3 from '../../images/pecas/peca3.jpeg';
 import pecas4 from '../../images/pecas/peca4.jpeg';
-
+import { useEffect } from 'react';
 import pecas5 from '../../images/pecas/peca1.jpeg';
 import pecas6 from '../../images/pecas/peca2.jpeg';
 import pecas7 from '../../images/pecas/peca3.jpeg';
@@ -36,6 +36,9 @@ const imagens = [
 ];
 
 const PagePecasDiponiveis = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />

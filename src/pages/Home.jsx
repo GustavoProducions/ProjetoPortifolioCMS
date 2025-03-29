@@ -8,6 +8,7 @@ import teste2 from '@/images/manutencao_icon.png';
 import teste3 from '@/images/peca_venda.png';
 import HomePage from './SubPages/HomePage';
 import Navbar from './components/navbar';
+import { Link } from 'react-router-dom';
 
 const imagens = [teste1, teste2, teste3];
 
@@ -30,7 +31,7 @@ export function Home() {
     {
       id: 3,
       router: '/pecas/disponiveis',
-      name: 'Peças Dísponiveis',
+      name: 'Peças Disponíveis',
       title:
         'Soluções industriais à sua disposição. Adquira peças de alta performance para seu negócio'
     }
@@ -49,7 +50,7 @@ export function Home() {
         <HomePage />
       </motion.div>
       <motion.div
-        id="servicos"
+        id="usinagem"
         className="max-w-auto mt-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -79,9 +80,11 @@ export function Home() {
                     <p className="text-center mb-4 text-lg">
                       {titles[index].title}
                     </p>
-                    <Button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10">
-                      <a href={titles[index].router}>Saiba Mais</a>
-                    </Button>
+                    <Link to={titles[index].router}>
+                      <Button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-90 z-10">
+                        Saiba mais
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}

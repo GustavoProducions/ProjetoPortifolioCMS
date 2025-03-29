@@ -10,6 +10,7 @@ import pecas1 from '../../images/pecas/peca1.jpeg';
 import pecas2 from '../../images/pecas/peca2.jpeg';
 import pecas3 from '../../images/pecas/peca3.jpeg';
 import pecas4 from '../../images/pecas/peca4.jpeg';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const imagens = [pecas1, pecas2, pecas3, pecas4];
@@ -38,9 +39,11 @@ const PecasDisponiveis = () => {
                 <p className="mb-5 text-[23px] h-16 flex items-center justify-center">
                   Imagem {index + 1}
                 </p>
-                <Button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10">
-                  <a href="/pecas/disponiveis">Saiba mais</a>
-                </Button>
+                <Link to="/pecas/disponiveis" smooth={true} duration={500}>
+                  <Button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10">
+                    Saiba mais
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
@@ -70,7 +73,7 @@ const PecasDisponiveis = () => {
                     <Button
                       className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
                       onClick={() => {
-                        const whatsappUrl = `https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Olá, estou interessado na peça ${index + 1}`;
+                        const whatsappUrl = `https://api.whatsapp.com/send?phone=5511915659594&text=Olá, estou interessado na peça ${index + 1}`;
                         window.open(whatsappUrl, '_blank');
                       }}
                     >

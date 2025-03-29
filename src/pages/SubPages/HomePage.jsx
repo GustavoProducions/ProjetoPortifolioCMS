@@ -9,6 +9,7 @@ import {
 import um from '@/images/1.jpeg';
 import manutencao from '@/images/manutencao.webp';
 import usinagem from '@/images/usinagem.jpg';
+import { Link } from 'react-router-dom';
 
 const images = [
   {
@@ -71,11 +72,11 @@ const HomePage = () => {
                     <h2 className="text-lg font-bold">
                       <span>{image.text}</span>
                     </h2>
-                    <a href={image.router}>
+                    <Link to={image.router} smooth={true} duration={500}>
                       <Button className="mt-2 px-4 py-2 text-white rounded">
                         {image.buttonText}
                       </Button>
-                    </a>
+                    </Link>
                   </div>
                 </CarouselItem>
               ))}
