@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import WhatsAppButton from '../components/WhatsAppButton';
 import logo from '@/images/logoCM.png';
 import { Link } from 'react-router-dom';
-import { AlignJustify } from 'lucide-react';
+import { AlignJustify, MoveRight } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -48,8 +48,8 @@ const Navbar = () => {
               </Button>
             </Link>
             <Link to="/contato" smooth={true} duration={500}>
-              <Button variant="ghost" className="text-[16px]">
-                Contato
+              <Button variant="orcamento" className="text-[16px]">
+                Solicite um orçamento <MoveRight className="mt-1" />
               </Button>
             </Link>
           </nav>

@@ -1,22 +1,13 @@
-import { useState } from 'react';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import WhatsAppButton from '../components/WhatsAppButton';
-import logo from '@/images/logoCM.png';
-import { Link } from 'react-router-dom';
-import { AlignJustify } from 'lucide-react';
 import Footer from '../components/Footer';
-import { Mail, Phone, MessageCircle, Instagram, Facebook } from 'lucide-react';
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, Instagram, Facebook } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import Navbar from '../components/navbar';
 
 const ContactForm = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   return (
     <div>
       <Navbar />
@@ -39,20 +30,35 @@ const ContactForm = () => {
             </CardTitle>
             <form className="space-y-4">
               <div className="flex flex-col">
-              <Label className="text-[#2893B3] text-lg mb-2">Nome</Label>
-                <Input type="text" className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]" placeholder="*Nome"/>
+                <Label className="text-[#2893B3] text-lg mb-2">Nome</Label>
+                <Input
+                  type="text"
+                  className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]"
+                  placeholder="*Nome"
+                />
               </div>
               <div className="flex flex-col">
-              <Label className="text-[#2893B3] text-lg mb-2">Email</Label>
-                <Input type="email" className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]" placeholder="*E-Mail"/>
+                <Label className="text-[#2893B3] text-lg mb-2">Email</Label>
+                <Input
+                  type="email"
+                  className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]"
+                  placeholder="*E-Mail"
+                />
               </div>
               <div className="flex flex-col">
-              <Label className="text-[#2893B3] text-lg mb-2">WhatsApp</Label>
-                <Input type="text" className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]" placeholder="*Telefone"/>
+                <Label className="text-[#2893B3] text-lg mb-2">WhatsApp</Label>
+                <Input
+                  type="text"
+                  className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]"
+                  placeholder="*Telefone"
+                />
               </div>
               <div className="flex flex-col">
-              <Label className="text-[#2893B3] text-lg mb-2">Mensagem</Label>
-                <Textarea className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]" placeholder="Deixe sua mensagem" />
+                <Label className="text-[#2893B3] text-lg mb-2">Mensagem</Label>
+                <Textarea
+                  className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2893B3]"
+                  placeholder="Deixe sua mensagem"
+                />
               </div>
               <div className="flex justify-center">
                 <motion.button
@@ -75,58 +81,64 @@ const ContactForm = () => {
               Entre em Contato
             </CardTitle>
             <div className="space-y-3 text-gray-700 text-base">
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="mailto:manutecao.cezarmendes@gmail.com"
-                  className="hover:text-gray-400 flex items-center space-x-2"
-                >
-                  <Mail size={24} className="text-grey-800 hover:text-gray-400 " />
-                  <span className="text-grey-800 hover:text-gray-400">
-                    manutecao.cezarmendes@gmail.com
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://facebook.com"
-                  className="hover:text-gray-400 flex items-center space-x-2"
-                >
-                  <Facebook
-                    size={24}
-                    className="text-grey-800 hover:text-gray-400"
-                  />
-                  <span className="text-grey-800 hover:text-gray-400">
-                    Facebook
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com"
-                  className="hover:text-gray-400 flex items-center space-x-2"
-                >
-                  <Instagram
-                    size={24}
-                    className="text-grey-800 hover:text-gray-400"
-                  />
-                  <span className="text-grey-800 hover:text-gray-400">
-                    Instagram
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/5511915659594"
-                  className="hover:text-gray-400 flex items-center space-x-2"
-                >
-                  <Phone size={24} className="text-grey-800 hover:text-gray-400" />
-                  <span className="text-grey-800 hover:text-gray-400">
-                    Whatsapp
-                  </span>
-                </a>
-              </li>
-            </ul>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="mailto:manutecao.cezarmendes@gmail.com"
+                    className="hover:text-gray-400 flex items-center space-x-2"
+                  >
+                    <Mail
+                      size={24}
+                      className="text-grey-800 hover:text-gray-400 "
+                    />
+                    <span className="text-grey-800 hover:text-gray-400">
+                      manutecao.cezarmendes@gmail.com
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://facebook.com"
+                    className="hover:text-gray-400 flex items-center space-x-2"
+                  >
+                    <Facebook
+                      size={24}
+                      className="text-grey-800 hover:text-gray-400"
+                    />
+                    <span className="text-grey-800 hover:text-gray-400">
+                      Facebook
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com"
+                    className="hover:text-gray-400 flex items-center space-x-2"
+                  >
+                    <Instagram
+                      size={24}
+                      className="text-grey-800 hover:text-gray-400"
+                    />
+                    <span className="text-grey-800 hover:text-gray-400">
+                      Instagram
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/5511915659594"
+                    className="hover:text-gray-400 flex items-center space-x-2"
+                  >
+                    <Phone
+                      size={24}
+                      className="text-grey-800 hover:text-gray-400"
+                    />
+                    <span className="text-grey-800 hover:text-gray-400">
+                      Whatsapp
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </CardContent>
         </Card>
