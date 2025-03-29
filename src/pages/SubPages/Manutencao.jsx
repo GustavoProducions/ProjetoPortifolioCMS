@@ -9,7 +9,7 @@ import { AlignJustify } from 'lucide-react';
 import Footer from '../components/Footer';
 import { Mail, Phone, MessageCircle, Instagram, Facebook } from 'lucide-react';
 
-const ContactForm = () => {
+const Manutencoes = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -187,4 +187,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Manutencoes;

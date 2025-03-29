@@ -6,7 +6,6 @@ import {
   CarouselContent,
   CarouselItem
 } from '@/components/ui/carousel';
-import Typical from 'react-typical';
 import um from '@/images/1.jpeg';
 import manutencao from '@/images/manutencao.webp';
 import usinagem from '@/images/usinagem.jpg';
@@ -66,11 +65,7 @@ const HomePage = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50 text-white text-center">
                     <h5 className="text-[30px] font-bold">{image.title}</h5>
                     <h2 className="text-lg font-bold">
-                      <Typical
-                        steps={[image.text, 1000]}
-                        loop={1}
-                        wrapper="span"
-                      />
+                      <span>{image.text}</span>
                     </h2>
                     <Button className="mt-2 px-4 py-2 text-white rounded">
                       {image.buttonText}

@@ -9,18 +9,18 @@ import {
 import teste1 from '@/images/teste/engrenagem3.webp';
 import teste2 from '@/images/teste/engrenbagem.webp';
 import teste3 from '@/images/teste/rol,amento3.jpg';
-
-const imagens = [teste1, teste2, teste3];
+import teste4 from '@/images/teste/rol,amento3.jpg';
+const imagens = [teste1, teste2, teste3, teste4];
 
 const PecasDisponiveis = () => {
   return (
-    <Card className="border-none">
+    <Card className="border-none h-500">
       <CardContent>
-        <CardTitle className="text-[#2893B3] text-center mb-20 text-[33px]">
-          Lista de Peças disponíveis
-          <hr />
+        <CardTitle className="text-gray-600 text-center mb-20 text-[33px]">
+          Peças Disponíveis
+          <hr className="w-1/4 border-t-4 border-blue-500 mt-2 mx-auto" />
         </CardTitle>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
           {imagens.map((item, index) => (
             <Card
               key={index}
@@ -34,23 +34,28 @@ const PecasDisponiveis = () => {
                   className="w-[60%] h-[60%] object-cover rounded-lg"
                 />
               </CardContent>
-              <CardFooter>Nomes das peças</CardFooter>
+              <CardFooter>Nomes das peças a</CardFooter>
             </Card>
           ))}
         </div>
         <div className="md:hidden">
           <Carousel
-            opts={{ align: 'start', perPage: 1 }}
+            opts={{
+              align: 'start',
+              perPage: 1,
+              autoplay: true,
+              autoplayInterval: 3000
+            }}
             className="overflow-hidden"
           >
             <CarouselContent>
               {imagens.map((img, index) => (
-                <CarouselItem key={index} className="flex gap-4">
-                  <div className="rounded-lg overflow-hidden w-full h-[90px]:">
+                <CarouselItem key={index} className="flex gap-4 h-96">
+                  <div className="rounded-lg overflow-hidden w-full h-full">
                     <img
                       src={img}
                       alt={`Imagem ${index + 1}`}
-                      className="w-full h-40 object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </CarouselItem>

@@ -6,7 +6,7 @@ import { router } from './router';
 
 export default function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="maestro">
+    <ThemeProvider defaultTheme="light">
       <HelmetProvider>
         <Helmet title="CM Manutenção Industrial &#8482;" />
         <RouterProvider router={router} />

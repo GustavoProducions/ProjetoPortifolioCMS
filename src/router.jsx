@@ -1,7 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Usinagem } from './pages/Usinagem';
 import ContactForm from './pages/SubPages/Contato';
+import Usinagem from './pages/SubPages/usinagem';
+import Manutencoes from './pages/SubPages/Manutencao';
+import PagePecasDiponiveis from './pages/SubPages/PagePecas';
 
 export const router = createBrowserRouter([
   {
@@ -9,12 +11,20 @@ export const router = createBrowserRouter([
     element: <Home />
   },
   {
+    path: '/contato',
+    element: <ContactForm />
+  },
+  {
     path: '/usinagem',
     element: <Usinagem />
   },
   {
-    path: '/contato',
-    element: <ContactForm />
+    path: '/manutencao',
+    element: <Manutencoes />
+  },
+  {
+    path: '/pecas/disponiveis',
+    element: <PagePecasDiponiveis />
   },
   {
     path: '*',
