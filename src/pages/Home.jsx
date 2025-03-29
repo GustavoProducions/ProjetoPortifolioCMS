@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import PecasDisponiveis from './SubPages/PecasDisponiveis';
+import PecasDisponiveis from './components/PecasDisponiveis';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import Footer from './components/Footer';
 import teste1 from '@/images/usinagem_icon.png';
@@ -29,7 +29,7 @@ export function Home() {
     },
     {
       id: 3,
-      router: '/pecas-disponiveis',
+      router: '/pecas/disponiveis',
       name: 'Peças Dísponiveis',
       title:
         'Soluções industriais à sua disposição. Adquira peças de alta performance para seu negócio'

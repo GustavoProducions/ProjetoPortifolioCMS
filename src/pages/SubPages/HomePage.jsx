@@ -14,6 +14,7 @@ const images = [
   {
     src: usinagem,
     alt: 'Usinagem',
+    router: '/usinagem',
     title: 'Usinagem',
     text: 'A Cezar Mendes possui procedimentos e ações que norteiam e capacitam seus serviços.',
     buttonText: 'Saiba mais'
@@ -21,6 +22,7 @@ const images = [
   {
     src: um,
     alt: 'Manutenção',
+    router: '/manutencao',
     title: 'Manutenção',
     text: 'A manutenção industrial é essencial para garantir a eficiência e segurança das operações, prevenindo falhas e minimizando o tempo de inatividade.',
     buttonText: 'Saiba mais'
@@ -28,6 +30,7 @@ const images = [
   {
     src: manutencao,
     alt: 'Serviços',
+    router: '/pecas/disponiveis',
     title: 'Usinagem',
     text: 'Texto para Usinagem 2',
     buttonText: 'Saiba mais'
@@ -44,6 +47,7 @@ const HomePage = () => {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <Card className="relative w-full border-none">
       <CardContent className="flex flex-col relative z-10 h-full p-0">
@@ -67,9 +71,11 @@ const HomePage = () => {
                     <h2 className="text-lg font-bold">
                       <span>{image.text}</span>
                     </h2>
-                    <Button className="mt-2 px-4 py-2 text-white rounded">
-                      {image.buttonText}
-                    </Button>
+                    <a href={image.router}>
+                      <Button className="mt-2 px-4 py-2 text-white rounded">
+                        {image.buttonText}
+                      </Button>
+                    </a>
                   </div>
                 </CarouselItem>
               ))}

@@ -2,6 +2,7 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import Navbar from '../components/navbar';
+
 // IMPORTE DAS IMAGEMS maquinapage.jgp e maquinapage2.jpg
 const Manutencoes = () => {
   return (
