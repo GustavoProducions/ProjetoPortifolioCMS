@@ -1,73 +1,73 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
-import { Mail, Phone, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import Navbar from '../components/navbar';
+import usinagem from '../../images/pega-usinagem.avif';
+import usinagem2 from '../../images/page-usinagem2.jpg';
 
 const Usinagem = () => {
   return (
     <div>
       <Navbar />
       <motion.div
-        id="contato"
-        className="pt-[200px] sm:pt-[180px] md:pt-[160px] mt-10 flex flex-col md:flex-row justify-center items-center gap-6"
+        id="usinagem"
+        className="pt-[200px] sm:pt-[180px] md:pt-[160px] mt-10 flex flex-col gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* Coluna do Formulário */}
-        <Card className="border-none w-full md:w-2/5 bg-blue-50">
-          <CardContent>
-            <CardTitle className="text-gray-600 text-center mb-20 text-[33px]">
-              Usinagem
-              <hr className="w-1/3 border-t-4 border-blue-500 mt-2 mx-auto" />
-            </CardTitle>
-            <div>
-              <span className="text-xl">
-                Saiba mais sobre nossos serviços de Usinagem
-              </span>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          <Card className="border-none w-full md:w-2/5">
+            <CardContent>
+              <CardTitle className="text-gray-600 text-center mb-20 text-[33px]">
+                Usinagem
+                <hr className="w-1/3 border-t-4 border-blue-500 mt-2 mx-auto" />
+              </CardTitle>
               <div>
-                <span>
-                  A Inspectro possui procedimentos e ações que norteiam e
-                  capacitam seus serviços, contando com parceiros e
-                  colaboradores qualificados e comprometidos. Desta forma,
-                  permite oferecer aos clientes trabalhos com excelência em
-                  qualidade.
+                <span className="text-[25px]">
+                  Saiba mais sobre nossos serviços de Usinagem
                 </span>
+                <div>
+                  <br />
+                  <span className="text-lg text-[D3D3D3]">
+                    A Cezar Mendes possui procedimentos e ações que norteiam e
+                    capacitam seus serviços, contando com parceiros e
+                    colaboradores qualificados e comprometidos. Desta forma,
+                    permite oferecer aos clientes trabalhos com excelência em
+                    qualidade.
+                  </span>
+                </div>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Coluna dos Contatos */}
-        <Card className="border-none w-full md:w-2/5 flex flex-col justify-center items-center text-center">
-          <CardContent>
-            <CardTitle className="text-[#2893B3] text-[22px] mb-6">
-              Entre em Contato
-            </CardTitle>
-            <div className="space-y-3 text-gray-700 text-base">
-              <p className="flex items-center gap-2">
-                <Mail className="text-[#2893B3]" /> email@empresa.com
-              </p>
-              <p className="flex items-center gap-2">
-                <Phone className="text-[#2893B3]" /> +55 11 99999-9999
-              </p>
-              <p className="flex items-center gap-2">
-                <MessageCircle className="text-[#2893B3]" /> +55 11 99999-9999
-              </p>
-              <p className="flex items-center gap-2">
-                <Instagram className="text-[#2893B3]" /> @empresa
-              </p>
-              <p className="flex items-center gap-2">
-                <Facebook className="text-[#2893B3]" /> /empresa
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+          <div className="w-full md:w-2/5 mt-10 md:mt-0">
+            <img src={usinagem} alt="Usinagem" className="w-full h-auto" />
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
+          <div className="w-full md:w-2/5 mt-10 md:mt-0">
+            <img src={usinagem2} alt="Usinagem" className="w-full h-auto" />
+          </div>
+          <Card className="border-none w-full md:w-2/5">
+            <CardContent>
+              <div>
+                <span className="text-[25px]">Máquinas e Dispositivos</span>
+                <div>
+                  <br />
+                  <span className="text-lg text-[D3D3D3]">
+                    Construção de dispositivos, subconjuntos e partes de
+                    máquinas (inclusive montados) conforme desenhos de projeto
+                    enviados pelo cliente e ou desenvolvidos pela Cezar Mendes.
+                  </span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </motion.div>
       <motion.div
         id="footer"
-        className="pt-[100px] mx-auto "
+        className="pt-[100px] mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
