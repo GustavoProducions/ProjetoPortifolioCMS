@@ -5,8 +5,12 @@ import Navbar from '../components/navbar';
 import maquina1 from '../../images/9.jpeg';
 import maquina2 from '../../images/8.jpeg';
 import maquina3 from '../../images/2.jpeg';
+import { useEffect } from 'react';
 
 const Manutencoes = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />

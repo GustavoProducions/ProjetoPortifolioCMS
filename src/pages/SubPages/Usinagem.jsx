@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
@@ -6,11 +7,15 @@ import usinagem from '../../images/pega-usinagem.avif';
 import usinagem2 from '../../images/page-usinagem2.jpg';
 
 const Usinagem = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Navbar />
       <motion.div
-        id="usinagem"
+        id="a"
         className="pt-[200px] sm:pt-[180px] md:pt-[160px] mt-10 flex flex-col gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
