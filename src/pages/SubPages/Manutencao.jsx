@@ -2,8 +2,9 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import Navbar from '../components/navbar';
-import maquina1 from '../../images/maquinapage.jpg';
-import maquina2 from '../../images/maquinapage2.jpg';
+import maquina1 from '../../images/9.jpeg';
+import maquina2 from '../../images/8.jpeg';
+import maquina3 from '../../images/2.jpeg';
 
 const Manutencoes = () => {
   return (
@@ -18,7 +19,7 @@ const Manutencoes = () => {
       >
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
           <div className="w-full md:w-2/5 mt-10 md:mt-0">
-            <img src={maquina2} alt="Usinagem" className="w-full h-auto" />
+            <img src={maquina2} alt="Manutenção" className="w-full h-auto" />
           </div>
           <Card className="border-none w-full md:w-2/5">
             <CardContent>
@@ -41,7 +42,7 @@ const Manutencoes = () => {
                     finalização. Trabalhamos com precisão para reduzir paradas
                     inesperadas e otimizar a produtividade do seu negócio.
                     Confie na Cezar Mendes para manter suas máquinas operando
-                    com alto desempenho e qualidade!n
+                    com alto desempenho e qualidade!
                   </span>
                 </div>
               </div>
@@ -53,25 +54,54 @@ const Manutencoes = () => {
             <CardContent>
               <div>
                 <span className="text-[25px]">
-                  Saiba mais sobre nossos serviços de Manutenção
+                  Manutenção industrial com precisão e confiabilidade.
                 </span>
                 <div>
                   <br />
                   <span className="text-lg text-[D3D3D3]">
-                    Na Cezar Mendes, oferecemos soluções eficientes em
-                    manutenção, garantindo o perfeito funcionamento de
-                    equipamentos e estruturas. Nossa equipe altamente
-                    qualificada trabalha com seriedade e compromisso,
-                    proporcionando serviços de excelência e resultados
-                    confiáveis para nossos clientes.
+                    Na Cezar Mendes, realizamos serviços de manutenção corretiva
+                    e preditiva para garantir a operação contínua e eficiente
+                    dos seus equipamentos. Nossa equipe técnica utiliza
+                    metodologias avançadas para identificar falhas precocemente,
+                    reduzindo custos com reparos inesperados e aumentando a vida
+                    útil dos seus ativos.
                   </span>
                 </div>
               </div>
             </CardContent>
           </Card>
           <div className="w-full md:w-2/5 mt-10 md:mt-0">
-            <img src={maquina1} alt="Usinagem" className="w-full h-auto" />
+            <img
+              src={maquina1}
+              alt="Manutenção"
+              className="w-90 h-90 md:w-100 md:h-100 rounded-full object-cover"
+            />
           </div>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="w-full md:w-2/5 mt-10 md:mt-0">
+            <img src={maquina3} alt="Manutenção" className="w-full h-auto" />
+          </div>
+          <Card className="border-none w-full md:w-2/5">
+            <CardContent>
+              <div>
+                <span className="text-[25px]">
+                  Maximize a eficiência e reduza o tempo de inatividade.
+                </span>
+                <div>
+                  <br />
+                  <span className="text-lg text-[D3D3D3]">
+                    Manter seus equipamentos em perfeito estado é essencial para
+                    o sucesso do seu negócio. Na Cezar Mendes, aplicamos
+                    estratégias eficazes de manutenção para evitar falhas,
+                    corrigir problemas rapidamente e otimizar a produtividade.
+                    Com uma equipe altamente qualificada, garantimos soluções
+                    ágeis e confiáveis para que sua operação nunca pare.
+                  </span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </motion.div>
       <motion.div
