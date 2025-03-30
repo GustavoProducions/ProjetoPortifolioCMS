@@ -6,10 +6,10 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '@/components/ui/carousel';
-import pecas1 from '../../images/pecas/peca1.jpeg';
-import pecas2 from '../../images/pecas/peca2.jpeg';
-import pecas3 from '../../images/pecas/peca3.jpeg';
-import pecas4 from '../../images/pecas/peca4.jpeg';
+import pecas1 from '../../images/pecas/pecas1.png';
+import pecas2 from '../../images/pecas/pecas2.png';
+import pecas3 from '../../images/pecas/pecas3.png';
+import pecas4 from '../../images/pecas/pecas4.png';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 

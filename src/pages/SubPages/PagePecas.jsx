@@ -14,15 +14,15 @@ import Navbar from '../components/navbar';
 // import fotos9 from '../../images/9.jpeg';
 // import fotos10 from '../../images/10.jpeg';
 // import fotos11 from '../../images/11.jpeg';
-import pecas1 from '../../images/pecas/peca1.jpeg';
-import pecas2 from '../../images/pecas/peca2.jpeg';
-import pecas3 from '../../images/pecas/peca3.jpeg';
-import pecas4 from '../../images/pecas/peca4.jpeg';
+import pecas1 from '../../images/pecas/pecas1.png';
+import pecas2 from '../../images/pecas/pecas2.png';
+import pecas3 from '../../images/pecas/pecas3.png';
+import pecas4 from '../../images/pecas/pecas4.png';
 import { useEffect } from 'react';
-import pecas5 from '../../images/pecas/peca1.jpeg';
-import pecas6 from '../../images/pecas/peca2.jpeg';
-import pecas7 from '../../images/pecas/peca3.jpeg';
-import pecas8 from '../../images/pecas/peca4.jpeg';
+import pecas5 from '../../images/pecas/pecas1.png';
+import pecas6 from '../../images/pecas/pecas2.png';
+import pecas7 from '../../images/pecas/pecas3.png';
+import pecas8 from '../../images/pecas/pecas4.png';
 
 const imagens = [
   { src: pecas1, texto: 'Nome da peça', nome: 'Imagem 2' },
