@@ -13,7 +13,7 @@ const WhatsAppButton = () => {
       transition={{ duration: 1 }}
     >
       <a
-        href={`https://wa.me/5511984171772?text=${encodedMessage}`} // Substitua pelo seu número de WhatsApp
+        href={`https://wa.me/5511915659594?text=${encodedMessage}`} // Substitua pelo seu número de WhatsApp
         target="_blank"
         rel="noopener noreferrer"
         className="text-white p-4 rounded-full shadow-lg transition-colors duration-300"

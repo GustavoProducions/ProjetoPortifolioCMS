@@ -54,7 +54,7 @@ const Navbar = () => {
             </Link>
           </nav>
           {/* Menu móvel */}
-          <div>
+          <div className="md:hidden">
             <Button variant="outline" onClick={toggleMenu}>
               <AlignJustify size={20} />
             </Button>
