@@ -1,5 +1,6 @@
 import { Card, CardFooter } from '@/components/ui/card';
 import { Facebook, Instagram, Phone, Mail } from 'lucide-react';
+import whats from '../../images/whats.png';
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="footer-container grid grid-cols-1 sm:grid-cols-3 gap-8 text-gray-600 border-none">
           {/* Seção de Contato */}
           <div className="footer-section flex flex-col items-start border-none">
-            <h3 className="footer-title text-xl font-semibold mb-4 text-blue-400">
+            <h3 className="footer-title text-xl font-semibold mb-4 text-blue-400 mt-5 md:mt-0">
               Contato
             </h3>
             <ul className="space-y-3">
@@ -56,7 +57,8 @@ const Footer = () => {
                   href="https://wa.me/5511915659594"
                   className="hover:text-gray-400 flex items-center space-x-2"
                 >
-                  <Phone size={24} className="text-white hover:text-gray-400" />
+                  {/* <Phone size={24} className="text-white hover:text-gray-400" /> */}
+                  <img src={whats} className="w-7" />
                   <span className="text-white hover:text-gray-400">
                     Whatsapp
                   </span>

@@ -7,7 +7,7 @@ import {
   CarouselItem
 } from '@/components/ui/carousel';
 import um from '@/images/1.jpeg';
-import manutencao from '@/images/manutencao.webp';
+import manutencao from '@/images/home_manutencao.jpeg';
 import usinagem from '@/images/usinagem.jpg';
 import { Link } from 'react-router-dom';
 
@@ -21,19 +21,11 @@ const images = [
     buttonText: 'Saiba mais'
   },
   {
-    src: um,
+    src: manutencao,
     alt: 'Manutenção',
     router: '/manutencao',
     title: 'Manutenção',
     text: 'A manutenção industrial é essencial para garantir a eficiência e segurança das operações, prevenindo falhas e minimizando o tempo de inatividade.',
-    buttonText: 'Saiba mais'
-  },
-  {
-    src: manutencao,
-    alt: 'Serviços',
-    router: '/pecas/disponiveis',
-    title: 'Usinagem',
-    text: 'Texto para Usinagem 2',
     buttonText: 'Saiba mais'
   }
 ];

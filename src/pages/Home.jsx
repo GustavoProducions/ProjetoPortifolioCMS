@@ -42,7 +42,7 @@ export function Home() {
       <Navbar />
       <motion.div
         id="home"
-        className="pt-[200px] sm:pt-[180px] md:pt-[160px]"
+        className="pt-[50px] sm:pt-[180px] md:pt-[160px]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -51,15 +51,15 @@ export function Home() {
       </motion.div>
       <motion.div
         id="usinagem"
-        className="max-w-auto mt-20"
+        className="max-w-auto mt-10 md:mt-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <Card className="border-none">
           <CardContent>
-            <CardTitle className="text-gray-600 text-center mb-20 text-[33px]">
-              Nossos Serviços
+            <CardTitle className="text-gray-600 text-center mb-10 text-[33px] md:mb-10">
+              Serviços
               <hr className="w-1/4 border-t-4 border-blue-500 mt-2 mx-auto" />
             </CardTitle>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1600px] mx-auto">

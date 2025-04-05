@@ -12,6 +12,7 @@ import pecas3 from '../../images/pecas/pecas3.png';
 import pecas4 from '../../images/pecas/pecas4.png';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import Autoplay from 'embla-carousel-autoplay';
 
 const imagens = [pecas1, pecas2, pecas3, pecas4];
 
@@ -50,35 +51,34 @@ const PecasDisponiveis = () => {
         </div>
         <div className="md:hidden">
           <Carousel
-            opts={{
-              align: 'start',
-              perPage: 1,
-              autoplay: true,
-              autoplayInterval: 3000
-            }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                stopOnInteraction: false
+              })
+            ]}
             className="overflow-hidden"
           >
             <CarouselContent>
               {imagens.map((img, index) => (
-                <CarouselItem key={index} className="flex gap-4 h-96 group">
+                <CarouselItem
+                  key={index}
+                  className="flex flex-col items-center gap-4 h-96 group"
+                >
                   <div className="rounded-lg overflow-hidden w-full h-full relative flex flex-col items-center">
                     <img
                       src={img}
                       alt={`Imagem ${index + 1}`}
-                      className="w-full h-full object-cover mb-4"
+                      className="w-[50%] h-[65%] object-cover mb-4"
                     />
                     <p className="mb-5 text-[23px] h-16 flex items-center justify-center">
                       Imagem {index + 1}
                     </p>
-                    <Button
-                      className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
-                      onClick={() => {
-                        const whatsappUrl = `https://api.whatsapp.com/send?phone=5511915659594&text=Olá, estou interessado na peça ${index + 1}`;
-                        window.open(whatsappUrl, '_blank');
-                      }}
-                    >
-                      Saiba Mais
-                    </Button>
+                    <Link to="/pecas/disponiveis" smooth={true} duration={500}>
+                      <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded transition-opacity duration-300 z-50">
+                        Saiba Mais
+                      </button>
+                    </Link>
                   </div>
                 </CarouselItem>
               ))}

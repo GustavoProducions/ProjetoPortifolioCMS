@@ -15,19 +15,16 @@ const Manutencoes = () => {
     <div>
       <Navbar />
       <motion.div
-        id="manutencao"
-        className="pt-[200px] sm:pt-[180px] md:pt-[160px] mt-10 flex flex-col gap-6"
+        id="a"
+        className="pt-[90px] sm:pt-[180px] md:pt-[160px] mt-10 flex flex-col gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
-          <div className="w-full md:w-2/5 mt-10 md:mt-0">
-            <img src={maquina2} alt="Manutenção" className="w-full h-auto" />
-          </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <Card className="border-none w-full md:w-2/5">
             <CardContent>
-              <CardTitle className="text-gray-600 text-center mb-20 text-[33px]">
+              <CardTitle className="text-gray-600 text-center mb-16 text-[33px]">
                 Manutenção
                 <hr className="w-1/3 border-t-4 border-blue-500 mt-2 mx-auto" />
               </CardTitle>
@@ -52,9 +49,12 @@ const Manutencoes = () => {
               </div>
             </CardContent>
           </Card>
+          <div className="w-full md:w-2/5 mt-10 md:mt-0">
+            <img src={maquina2} alt="Usinagem" className="w-full h-auto" />
+          </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-          <Card className="border-none w-full md:w-2/5">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
+          <Card className="border-none w-full md:w-2/5 order-1 md:order-2">
             <CardContent>
               <div>
                 <span className="text-[25px]">
@@ -74,19 +74,12 @@ const Manutencoes = () => {
               </div>
             </CardContent>
           </Card>
-          <div className="w-full md:w-2/5 mt-10 md:mt-0">
-            <img
-              src={maquina1}
-              alt="Manutenção"
-              className="w-90 h-90 md:w-100 md:h-100 rounded-full object-cover"
-            />
+          <div className="w-full md:w-2/5 mt-10 md:mt-0 order-1 md:order-1">
+            <img src={maquina1} alt="Usinagem" className="w-full h-auto" />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-          <div className="w-full md:w-2/5 mt-10 md:mt-0">
-            <img src={maquina3} alt="Manutenção" className="w-full h-auto" />
-          </div>
-          <Card className="border-none w-full md:w-2/5">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
+          <Card className="border-none w-full md:w-2/5 order-1 md:order-1">
             <CardContent>
               <div>
                 <span className="text-[25px]">
@@ -94,7 +87,7 @@ const Manutencoes = () => {
                 </span>
                 <div>
                   <br />
-                  <span className="text-lg text-[D3D3D3]">
+                  <span>
                     Manter seus equipamentos em perfeito estado é essencial para
                     o sucesso do seu negócio. Na Cezar Mendes, aplicamos
                     estratégias eficazes de manutenção para evitar falhas,
@@ -106,6 +99,9 @@ const Manutencoes = () => {
               </div>
             </CardContent>
           </Card>
+          <div className="w-full md:w-2/5 mt-10 md:mt-0 order-1 md:order-2">
+            <img src={maquina3} alt="Usinagem" className="w-full h-auto" />
+          </div>
         </div>
       </motion.div>
       <motion.div

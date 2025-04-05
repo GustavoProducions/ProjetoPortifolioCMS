@@ -44,13 +44,13 @@ const PagePecasDiponiveis = () => {
       <Navbar />
       <motion.div
         id="pecas"
-        className="pt-[200px] sm:pt-[180px] md:pt-[160px] mt-10 flex flex-col justify-center items-center gap-6"
+        className="pt-[100px] sm:pt-[180px] md:pt-[160px] mt-10 flex flex-col justify-center items-center gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <div>
-          <CardTitle className="text-gray-600 text-center mb-20 text-[33px]">
+          <CardTitle className="text-gray-600 text-center mb-16 text-[33px]">
             Peças Disponíveis para venda
             <hr className="w-1/3 border-t-4 border-blue-500 mt-2 mx-auto" />
           </CardTitle>
