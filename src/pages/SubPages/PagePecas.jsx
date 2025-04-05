@@ -19,8 +19,8 @@ import pecas2 from '../../images/pecas/pecas2.png';
 import pecas3 from '../../images/pecas/pecas3.png';
 import pecas4 from '../../images/pecas/pecas4.png';
 import { useEffect } from 'react';
-import pecas5 from '../../images/pecas/pecas1.png';
-import pecas6 from '../../images/pecas/pecas2.png';
+import pecas5 from '../../images/pecas-usinagem.jpg';
+import pecas6 from '../../images/pecas2-usinagem.png';
 import pecas7 from '../../images/pecas/pecas3.png';
 import pecas8 from '../../images/pecas/pecas4.png';
 
