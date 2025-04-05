@@ -6,7 +6,6 @@ import {
   CarouselContent,
   CarouselItem
 } from '@/components/ui/carousel';
-import um from '@/images/1.jpeg';
 import manutencao from '@/images/home_manutencao.jpeg';
 import usinagem from '@/images/usinagem.jpg';
 import { Link } from 'react-router-dom';

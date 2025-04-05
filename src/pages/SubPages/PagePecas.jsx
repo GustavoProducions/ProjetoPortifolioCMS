@@ -15,24 +15,50 @@ import Navbar from '../components/navbar';
 // import fotos10 from '../../images/10.jpeg';
 // import fotos11 from '../../images/11.jpeg';
 import pecas1 from '../../images/pecas/pecas1.png';
-import pecas2 from '../../images/pecas/pecas2.png';
+import pecas2 from '../../images/pecas/pecas4.png';
 import pecas3 from '../../images/pecas/pecas3.png';
-import pecas4 from '../../images/pecas/pecas4.png';
+import pecas4 from '../../images/pecas/pecas2.png';
 import { useEffect } from 'react';
-import pecas5 from '../../images/pecas-usinagem.jpg';
-import pecas6 from '../../images/pecas2-usinagem.png';
-import pecas7 from '../../images/pecas/pecas3.png';
-import pecas8 from '../../images/pecas/pecas4.png';
+import pecas5 from '../../images/pecas/pecas5.jpg';
+import pecas6 from '../../images/pecas/pecas6.png';
 
-const imagens = [
-  { src: pecas1, texto: 'Nome da peça', nome: 'Imagem 2' },
-  { src: pecas2, texto: 'Nome da peça', nome: 'Imagem 3' },
-  { src: pecas3, texto: 'Nome da peça', nome: 'Imagem 4' },
-  { src: pecas4, texto: 'Nome da peça', nome: 'Imagem 5' },
-  { src: pecas5, texto: 'Nome da peça', nome: 'Imagem 2' },
-  { src: pecas6, texto: 'Nome da peça', nome: 'Imagem 3' },
-  { src: pecas7, texto: 'Nome da peça', nome: 'Imagem 4' },
-  { src: pecas8, texto: 'Nome da peça', nome: 'Imagem 5' }
+const imagensMobile = [
+  // Primeira coluna no desktop (vertical) / Primeira dupla no mobile (horizontal)
+  {
+    src: pecas1,
+    texto: 'Peças laterais do coleiro',
+    nome: 'Peças laterais do coleiro'
+  },
+  {
+    src: pecas2,
+    texto: 'Peças laterais do coleiro',
+    nome: 'Peças laterais do coleiro'
+  },
+
+  // Segunda coluna no desktop (vertical) / Segunda dupla no mobile (horizontal)
+  { src: pecas3, texto: 'Caixa do coleiro', nome: 'Caixa do coleiro' },
+  { src: pecas4, texto: 'Caixa do coleiro', nome: 'Caixa do coleiro' },
+
+  // Terceira coluna no desktop (vertical) / Terceira dupla no mobile (horizontal)
+  { src: pecas5, texto: 'Peça do coleiro', nome: 'Peça do coleiro' },
+  { src: pecas6, texto: 'Peça do coleiro', nome: 'Peça do coleiro' }
+];
+const imagensDesktop = [
+  // Coluna 1 (desktop)
+  {
+    src: pecas1,
+    texto: 'Peças laterais do coleiro',
+    nome: 'Peças laterais do coleiro'
+  },
+  { src: pecas3, texto: 'Caixa do coleiro', nome: 'Caixa do coleiro' },
+  { src: pecas5, texto: 'Peça do coleiro', nome: 'Peça do coleiro' },
+  {
+    src: pecas2,
+    texto: 'Peças laterais do coleiro',
+    nome: 'Peças laterais do coleiro'
+  },
+  { src: pecas4, texto: 'Caixa do coleiro', nome: 'Caixa do coleiro' },
+  { src: pecas6, texto: 'Peça do coleiro', nome: 'Peça do coleiro' }
 ];
 
 const PagePecasDiponiveis = () => {
@@ -55,25 +81,49 @@ const PagePecasDiponiveis = () => {
             <hr className="w-1/3 border-t-4 border-blue-500 mt-2 mx-auto" />
           </CardTitle>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-[1600px] mx-auto">
-          {imagens.map((item, index) => (
+        <div className="grid md:hidden grid-cols-2 gap-5 max-w-[1200px] mx-auto pl-4">
+          {imagensMobile.map((item, index) => (
             <Card
               key={index}
-              className="relative transform transition-transform duration-300 hover:scale-105 hover:-translate-y-5 group"
+              className="relative transform transition-transform duration-300 hover:scale-105 group"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-[#2893B3] scale-x-0 transition-transform duration-300 hover:scale-x-100"></div>
-              <div className="absolute inset-0 border-4 border-transparent hover:border-blue-500 transition-all duration-300"></div>
               <CardContent className="flex flex-col items-center p-4">
                 <img
                   src={item.src}
-                  alt={`Imagem ${index + 1}`}
-                  className="w-full h-64 object-cover rounded-lg mb-4"
+                  alt={item.nome}
+                  className="w-[250px] h-[180px] object-contain rounded-lg mb-4"
                 />
-                <p className="mb-5 text-[23px]">{item.texto}</p>
+                <p className="mb-5 text-[23px] h-[60px]">{item.texto}</p>
                 <Button
                   className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
                   onClick={() => {
-                    const whatsappUrl = `https://api.whatsapp.com/send?phone=+5511984171772R&text=Olá, estou interessado na ${item.nome}`;
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=+5511984171772&text=Olá, estou interessado na ${item.nome}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
+                >
+                  Saiba Mais
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <div className="hidden md:grid grid-cols-3 gap-5 max-w-[1200px] mx-auto pl-4">
+          {imagensDesktop.map((item, index) => (
+            <Card
+              key={index}
+              className="relative transform transition-transform duration-300 hover:scale-105 group"
+            >
+              <CardContent className="flex flex-col items-center p-4">
+                <img
+                  src={item.src}
+                  alt={item.nome}
+                  className="w-[250px] h-[180px] object-contain rounded-lg mb-4"
+                />
+                <p className="mb-5 text-[23px] h-[60px]">{item.texto}</p>
+                <Button
+                  className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
+                  onClick={() => {
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=+5511984171772&text=Olá, estou interessado na ${item.nome}`;
                     window.open(whatsappUrl, '_blank');
                   }}
                 >
@@ -84,6 +134,7 @@ const PagePecasDiponiveis = () => {
           ))}
         </div>
       </motion.div>
+
       <motion.div
         id="footer"
         className="pt-[100px] mx-auto"

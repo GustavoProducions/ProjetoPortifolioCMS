@@ -1,6 +1,6 @@
 import { Card, CardFooter } from '@/components/ui/card';
-import { Facebook, Instagram, Phone, Mail } from 'lucide-react';
-import whats from '../../images/whats.png';
+import { Facebook, Instagram, Mail } from 'lucide-react';
+import whatsapp from '../../images/whatsapp.png';
 
 const Footer = () => {
   return (
@@ -58,7 +58,7 @@ const Footer = () => {
                   className="hover:text-gray-400 flex items-center space-x-2"
                 >
                   {/* <Phone size={24} className="text-white hover:text-gray-400" /> */}
-                  <img src={whats} className="w-7" />
+                  <img src={whatsapp} className="w-6" />
                   <span className="text-white hover:text-gray-400">
                     Whatsapp
                   </span>

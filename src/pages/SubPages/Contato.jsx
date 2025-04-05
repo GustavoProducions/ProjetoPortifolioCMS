@@ -3,13 +3,13 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import emailjs from 'emailjs-com';
-import { Mail, Phone, Instagram, Facebook } from 'lucide-react';
+import { Mail, Instagram, Facebook } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import Navbar from '../components/navbar';
 import { useToast } from '../../components/ui/use-toast';
-import whats from '../../images/whats.png';
+import whatsapp from '../../images/whatsapp.png';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -204,9 +204,9 @@ const ContactForm = () => {
                     href="https://wa.me/5511915659594"
                     className="hover:text-gray-400 flex items-center space-x-2"
                   >
-                    <Phone
-                      size={24}
-                      className="text-grey-800 hover:text-gray-400"
+                    <img
+                      src={whatsapp}
+                      className="w-6 brightness-75 contrast-150 invert opacity-100 hover:brightness-100 hover:contrast-200"
                     />
                     <span className="text-grey-800 hover:text-gray-400">
                       Whatsapp

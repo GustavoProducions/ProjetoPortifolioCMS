@@ -2,9 +2,9 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import Navbar from '../components/navbar';
-import maquina1 from '../../images/9.jpeg';
-import maquina2 from '../../images/8.jpeg';
-import maquina3 from '../../images/2.jpeg';
+import maquina1 from '../../images/2.jpeg';
+import maquina2 from '../../images/11.jpeg';
+import maquina3 from '../../images/3.jpeg';
 import { useEffect } from 'react';
 
 const Manutencoes = () => {
@@ -35,15 +35,12 @@ const Manutencoes = () => {
                 <div>
                   <br />
                   <span className="text-lg text-[D3D3D3]">
-                    Garantimos a máxima eficiência e durabilidade para suas
-                    máquinas de acabamento gráfico. Nossa equipe especializada
-                    realiza manutenção corretiva e preventiva em equipamentos
-                    essenciais para o setor, como coleiros, dobradeiras,
-                    trilaterais e outros dispositivos de encadernação e
-                    finalização. Trabalhamos com precisão para reduzir paradas
-                    inesperadas e otimizar a produtividade do seu negócio.
-                    Confie na Cezar Mendes para manter suas máquinas operando
-                    com alto desempenho e qualidade!
+                    Na Cezar Mendes, realizamos serviços de manutenção corretiva
+                    e preditiva para garantir a operação contínua e eficiente
+                    dos seus equipamentos. Nossa equipe técnica utiliza
+                    metodologias avançadas para identificar falhas precocemente,
+                    reduzindo custos com reparos inesperados e aumentando a vida
+                    útil dos seus ativos. !
                   </span>
                 </div>
               </div>
@@ -58,17 +55,20 @@ const Manutencoes = () => {
             <CardContent>
               <div>
                 <span className="text-[25px]">
-                  Manutenção industrial com precisão e confiabilidade.
+                  Somos especializados em máquinas BabyBinder
                 </span>
                 <div>
                   <br />
                   <span className="text-lg text-[D3D3D3]">
-                    Na Cezar Mendes, realizamos serviços de manutenção corretiva
-                    e preditiva para garantir a operação contínua e eficiente
-                    dos seus equipamentos. Nossa equipe técnica utiliza
-                    metodologias avançadas para identificar falhas precocemente,
-                    reduzindo custos com reparos inesperados e aumentando a vida
-                    útil dos seus ativos.
+                    Garantimos a máxima eficiência e durabilidade para suas
+                    máquinas de acabamento gráfico. Nossa equipe especializada
+                    realiza manutenção corretiva e preventiva em equipamentos
+                    essenciais para o setor, como coleiros, dobradeiras,
+                    trilaterais e outros dispositivos de encadernação e
+                    finalização. Trabalhamos com precisão para reduzir paradas
+                    inesperadas e otimizar a produtividade do seu negócio.
+                    Confie na Cezar Mendes para manter suas máquinas operando
+                    com alto desempenho e qualidade
                   </span>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const Manutencoes = () => {
                 </span>
                 <div>
                   <br />
-                  <span>
+                  <span className="text-lg text-[D3D3D3]">
                     Manter seus equipamentos em perfeito estado é essencial para
                     o sucesso do seu negócio. Na Cezar Mendes, aplicamos
                     estratégias eficazes de manutenção para evitar falhas,
