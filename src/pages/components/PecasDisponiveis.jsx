@@ -16,7 +16,14 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Autoplay from 'embla-carousel-autoplay';
 
-const imagens = [pecas1, pecas2, pecas3, pecas4, pecas5, pecas6];
+const imagens = [
+  { src: pecas1, nome: 'Peças laterais do coleiro' },
+  { src: pecas2, nome: 'Caixa do coleiro' },
+  { src: pecas5, nome: 'Peça do coleiro' },
+  { src: pecas4, nome: 'Peças laterais do coleiro' },
+  { src: pecas3, nome: 'Caixa do coleiro' },
+  { src: pecas6, nome: 'Peça do coleiro' }
+];
 
 const PecasDisponiveis = () => {
   return (
@@ -38,7 +45,7 @@ const PecasDisponiveis = () => {
             className="w-full flex justify-center overflow-hidden"
           >
             <CarouselContent className="flex flex-nowrap w-full">
-              {imagens.map((img, index) => (
+              {imagens.map((item, index) => (
                 <CarouselItem
                   key={index}
                   className="basis-1/3 shrink-0 flex-grow-0 flex flex-col items-center gap-4 h-96 relative transform transition-transform duration-300 hover:scale-105 group"
@@ -46,12 +53,12 @@ const PecasDisponiveis = () => {
                 >
                   <div className="rounded-lg w-full h-full relative flex flex-col items-center">
                     <img
-                      src={img}
-                      alt={`Imagem ${index + 1}`}
+                      src={item.src}
+                      alt={item.nome}
                       className="max-w-[300px] max-h-[200px] aspect-[4/3] object-contain mb-4"
                     />
                     <p className="mb-5 text-[23px] h-16 flex items-center justify-center">
-                      Imagem {index + 1}
+                      {item.nome}
                     </p>
                     <Link to="/pecas/disponiveis" smooth={true} duration={500}>
                       <Button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded transition-opacity duration-300 z-50">
@@ -66,7 +73,6 @@ const PecasDisponiveis = () => {
             <CarouselNext />
           </Carousel>
         </div>
-
         <div className="md:hidden">
           <Carousel
             plugins={[
@@ -78,19 +84,21 @@ const PecasDisponiveis = () => {
             className="overflow-hidden"
           >
             <CarouselContent>
-              {imagens.map((img, index) => (
+              {imagens.map((item, index) => (
                 <CarouselItem
                   key={index}
                   className="flex flex-col items-center gap-4 h-96 group"
                 >
                   <div className="rounded-lg overflow-hidden w-full h-full relative flex flex-col items-center">
+                    {/* Corrigido: Agora acessa corretamente `item.src` */}
                     <img
-                      src={img}
-                      alt={`Imagem ${index + 1}`}
+                      src={item.src}
+                      alt={item.nome}
                       className="max-w-full h-auto max-h-[180px] object-contain mb-4"
                     />
+                    {/* Corrigido: Agora exibe corretamente `item.nome` */}
                     <p className="mb-5 text-[23px] h-16 flex items-center justify-center">
-                      Imagem {index + 1}
+                      {item.nome}
                     </p>
                     <Link to="/pecas/disponiveis" smooth={true} duration={500}>
                       <Button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded transition-opacity duration-300 z-50">

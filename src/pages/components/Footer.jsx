@@ -6,9 +6,50 @@ const Footer = () => {
   return (
     <Card className="w-full bg-gray-900 text-white">
       <CardFooter className="footer-container max-w-screen-xl mx-auto md:h-[500px] border-none">
-        <div className="footer-container grid grid-cols-1 sm:grid-cols-3 gap-8 text-gray-600 border-none">
-          {/* Seção de Contato */}
-          <div className="footer-section flex flex-col items-start border-none">
+        <div className="footer-container grid grid-cols-1 sm:grid-cols-3 gap-8 text-gray-600 border-none mt-5g">
+          {/* Seção de Navegação */}
+          <div className="footer-section flex flex-col items-start">
+            <h3 className="footer-title text-xl font-semibold mb-4 text-blue-400">
+              Navegação
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="/" className="text-white hover:text-gray-400">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-white hover:text-gray-400">
+                  Sobre
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-white hover:text-gray-400">
+                  Serviços
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-white hover:text-gray-400">
+                  Contato
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Seção Sobre Nós */}
+          <div className="footer-section flex flex-col items-start">
+            <h3 className="footer-title text-xl font-semibold mb-4 text-blue-400">
+              Sobre nós
+            </h3>
+            <p className="text-l leading-relaxed text-white hover:text-gray-400">
+              Somos uma empresa especializada em manutenção e serviços de alta
+              qualidade. Nossa missão é garantir a satisfação dos nossos
+              clientes com soluções eficientes e personalizadas.
+            </p>
+          </div>
+
+          {/* Seção de Contato (Vai para o final no mobile) */}
+          <div className="footer-section flex flex-col items-start border-none order-last sm:order-none">
             <h3 className="footer-title text-xl font-semibold mb-4 text-blue-400 mt-5 md:mt-0">
               Contato
             </h3>
@@ -57,7 +98,6 @@ const Footer = () => {
                   href="https://wa.me/5511915659594"
                   className="hover:text-gray-400 flex items-center space-x-2"
                 >
-                  {/* <Phone size={24} className="text-white hover:text-gray-400" /> */}
                   <img src={whatsapp} className="w-6" />
                   <span className="text-white hover:text-gray-400">
                     Whatsapp
@@ -65,47 +105,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Seção de Navegação */}
-          <div className="footer-section flex flex-col items-start">
-            <h3 className="footer-title text-xl font-semibold mb-4 text-blue-400">
-              Navegação
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="/" className="text-white hover:text-gray-400">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-white hover:text-gray-400">
-                  Sobre
-                </a>
-              </li>
-              <li>
-                <a href="/services" className="text-white hover:text-gray-400">
-                  Serviços
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-white hover:text-gray-400">
-                  Contato
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Seção Sobre Nós */}
-          <div className="footer-section flex flex-col items-start">
-            <h3 className="footer-title text-xl font-semibold mb-4 text-blue-400">
-              Sobre nós
-            </h3>
-            <p className="text-l leading-relaxed text-white hover:text-gray-400">
-              Somos uma empresa especializada em manutenção e serviços de alta
-              qualidade. Nossa missão é garantir a satisfação dos nossos
-              clientes com soluções eficientes e personalizadas.
-            </p>
           </div>
         </div>
       </CardFooter>

@@ -93,7 +93,9 @@ const PagePecasDiponiveis = () => {
                   alt={item.nome}
                   className="w-[250px] h-[180px] object-contain rounded-lg mb-4"
                 />
-                <p className="mb-5 text-[23px] h-[60px]">{item.texto}</p>
+                <p className="mb-5 text-[16px] md:text-[23px] h-[60px]">
+                  {item.texto}
+                </p>
                 <Button
                   className="mt-2 px-4 py-2 bg-blue-500 text-white rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
                   onClick={() => {

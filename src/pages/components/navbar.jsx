@@ -49,7 +49,9 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt="Logo CM Manutencao"
-                  className={`w-32 mt-3 md:mt-0 h-auto object-cover md:w-56 transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}
+                  className={`w-32 mt-3 md:mt-0 h-auto object-cover md:w-56 transition-all duration-300 ${
+                    isScrolled ? 'opacity-0 md:opacity-100' : 'opacity-100'
+                  }`}
                 />
               </Button>
             </Link>
