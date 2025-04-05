@@ -23,7 +23,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Logo RTL Rolamentos"
-              className="w-56 h-auto object-cover"
+              className="w-40 h-auto object-cover md:w-56"
             />
           </motion.h1>
           <nav className="hidden md:flex space-x-6">
