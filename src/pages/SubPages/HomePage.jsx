@@ -40,6 +40,10 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Card className="relative w-full border-none">
       <CardContent className="flex flex-col relative z-10 h-full p-0">

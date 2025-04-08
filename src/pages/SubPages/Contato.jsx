@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
@@ -12,6 +12,10 @@ import { useToast } from '../../components/ui/use-toast';
 import whatsapp from '../../images/whatsapp.png';
 
 const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -173,7 +177,7 @@ const ContactForm = () => {
                 </li>
                 <li>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/profile.php?id=61574790642343"
                     className="hover:text-gray-400 flex items-center space-x-2"
                   >
                     <Facebook
@@ -187,7 +191,7 @@ const ContactForm = () => {
                 </li>
                 <li>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/mendesmanutencaoindustrial/"
                     className="hover:text-gray-400 flex items-center space-x-2"
                   >
                     <Instagram
