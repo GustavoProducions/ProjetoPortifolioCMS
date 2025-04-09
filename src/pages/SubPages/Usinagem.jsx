@@ -1,16 +1,42 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import Slider from 'react-slick';
 import Footer from '../components/Footer';
 import Navbar from '../components/navbar';
 import usinagem from '../../images/pega-usinagem.avif';
 import usinagem2 from '../../images/page-usinagem2.jpg';
 import video1 from '../../images/usinagem_video.mp4';
+import video2 from '../../images/usinagem2_video.mp4';
+import video3 from '../../images/usinagem3_video.mp4';
+import video4 from '../../images/usinagem4_video.mp4';
 
 const Usinagem = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const videos = [video1, video2, video3, video4]; // Array de vídeos.
+  const [activeIndex, setActiveIndex] = useState(0); // Slide atualmente ativo.
+
+  const handleVideoInteraction = (video, event) => {
+    event.preventDefault(); // Impede o comportamento padrão
+    if (video.paused) {
+      video.play(); // Reproduz o vídeo se estiver pausado
+    } else {
+      video.pause(); // Pausa o vídeo se estiver tocando
+    }
+  };
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false, // Desativa autoplay para evitar reprodução automática
+    beforeChange: (oldIndex, newIndex) => setActiveIndex(newIndex) // Atualiza o índice ativo
+  };
 
   return (
     <div>
@@ -22,6 +48,7 @@ const Usinagem = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
+        {/* Seção de Usinagem */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <Card className="border-none w-full md:w-2/5">
             <CardContent>
@@ -50,6 +77,8 @@ const Usinagem = () => {
             <img src={usinagem} alt="Usinagem" className="w-full h-auto" />
           </div>
         </div>
+
+        {/* Seção de Máquinas e Dispositivos */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
           <Card className="border-none w-full md:w-2/5 order-1 md:order-2">
             <CardContent>
@@ -70,29 +99,31 @@ const Usinagem = () => {
             <img src={usinagem2} alt="Usinagem" className="w-full h-auto" />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
-          <Card className="border-none w-full md:w-2/5 order-1 md:order-1">
-            <CardContent>
-              <div>
-                <span className="text-[25px]">Vídeos nossos de usinagem!</span>
-                <div>
-                  <br />
-                  <span>nosso videos mostrando nosso trabalho</span>
+
+        {/* Carrossel de Vídeos */}
+        <div className="flex flex-col items-center justify-center gap-6 mt-10">
+          <h3 className="text-[25px] font-bold mb-6">Galeria de Vídeos</h3>
+          <div className="w-full md:w-3/5">
+            <Slider {...sliderSettings}>
+              {videos.map((videoSrc, index) => (
+                <div key={index} className="flex justify-center">
+                  {activeIndex === index && ( // Renderiza apenas o slide ativo
+                    <video
+                      src={videoSrc}
+                      controls
+                      className="w-full h-[500px] rounded-lg shadow-lg cursor-pointer"
+                      onClick={(e) => handleVideoInteraction(e.target, e)} // Clique para pausar/despausar
+                      onTouchStart={(e) => handleVideoInteraction(e.target, e)} // Toque para pausar/despausar no mobile
+                    />
+                  )}
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-          <div className="w-full md:w-2/5 mt-10 md:mt-0 order-1 md:order-2">
-            <video
-              src={video1}
-              autoPlay
-              loop
-              muted
-              className="w-full h-[500px]"
-            ></video>
+              ))}
+            </Slider>
           </div>
         </div>
       </motion.div>
+
+      {/* Footer */}
       <motion.div
         id="footer"
         className="pt-[100px] mx-auto"
