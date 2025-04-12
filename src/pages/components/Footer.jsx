@@ -122,7 +122,10 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-copyright bg-transparent text-center text-sm text-gray-400 py-4">
-        <span>&copy; 2025 CM Manutenção. Todos os direitos reservados.</span>
+        <span>
+          CNPJ: 43.429.081/0001-52 | &copy; 2025 CM Manutenção | Todos os
+          direitos reservados.
+        </span>
       </div>
     </Card>
   );
