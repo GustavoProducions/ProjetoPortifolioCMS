@@ -48,10 +48,10 @@ const PecasDisponiveis = () => {
               {imagens.map((item, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-1/3 shrink-0 flex-grow-0 flex flex-col items-center gap-4 h-96 relative transform transition-transform duration-300 hover:scale-105 group"
+                  className="basis-1/3 shrink-0 flex-grow-0 flex flex-col items-center gap-4 h-96 relative transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2 group"
                   style={{ overflow: 'visible', willChange: 'transform' }}
                 >
-                  <div className="rounded-lg w-full h-full relative flex flex-col items-center">
+                  <div className="rounded-lg w-full h-full relative flex flex-col items-center transition-all duration-300 hover:shadow-[0_4px_20px_rgba(40,147,179,0.5)] hover:border-[3px] hover:border-blue-500">
                     <img
                       src={item.src}
                       alt={item.nome}
@@ -87,16 +87,14 @@ const PecasDisponiveis = () => {
               {imagens.map((item, index) => (
                 <CarouselItem
                   key={index}
-                  className="flex flex-col items-center gap-4 h-96 group"
+                  className="flex flex-col items-center gap-4 h-96 group hover:scale-105 hover:-translate-y-2"
                 >
-                  <div className="rounded-lg overflow-hidden w-full h-full relative flex flex-col items-center">
-                    {/* Corrigido: Agora acessa corretamente `item.src` */}
+                  <div className="rounded-lg overflow-hidden w-full h-full relative flex flex-col items-center transition-all duration-300 hover:shadow-[0_4px_20px_rgba(40,147,179,0.5)] hover:border-[3px] hover:border-blue-500">
                     <img
                       src={item.src}
                       alt={item.nome}
                       className="max-w-full h-auto max-h-[180px] object-contain mb-4"
                     />
-                    {/* Corrigido: Agora exibe corretamente `item.nome` */}
                     <p className="mb-5 text-[23px] h-16 flex items-center justify-center">
                       {item.nome}
                     </p>

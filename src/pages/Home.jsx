@@ -51,7 +51,7 @@ export function Home() {
       </motion.div>
       <motion.div
         id="usinagem"
-        className="max-w-auto mt-10 md:mt-10"
+        className="max-w-[1200px] mx-auto mt-10 md:mt-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -74,7 +74,7 @@ export function Home() {
                     <img
                       src={item}
                       alt={`Imagem ${index + 1}`}
-                      className="w-[50%] h-full object-cover rounded-lg mb-4"
+                      className="w-[50%] h-[200px] object-cover rounded-lg mb-4"
                     />
                     <p className="mb-5 text-[23px]">{titles[index].name}</p>
                     <p className="text-center mb-4 text-lg">
@@ -94,7 +94,7 @@ export function Home() {
       </motion.div>
       <motion.div
         id="pecas"
-        className="max-w-auto h-full mt-16"
+        className="max-w-[1200px] mx-auto mt-16 min-h-[500px] flex justify-center items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -103,7 +103,7 @@ export function Home() {
       </motion.div>
       <motion.div
         id="footer"
-        className="pt-[100px] mx-auto "
+        className="pt-[100px] mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
