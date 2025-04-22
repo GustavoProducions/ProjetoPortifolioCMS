@@ -5,6 +5,8 @@ import Navbar from '../components/navbar';
 import maquina1 from '../../images/2.jpeg';
 import maquina2 from '../../images/11.jpeg';
 import maquina3 from '../../images/3.jpeg';
+import maquina4 from '../../images/coleiro-muller.jpeg';
+import maquina5 from '../../images/coleiro-muller2.jpeg';
 import { useEffect } from 'react';
 
 const Manutencoes = () => {
@@ -100,7 +102,50 @@ const Manutencoes = () => {
             </CardContent>
           </Card>
           <div className="w-full md:w-2/5 mt-10 md:mt-0 order-1 md:order-2">
-            <img src={maquina3} alt="Usinagem" className="w-full h-auto" />
+            <img src={maquina3} alt="Manutencao" className="w-full h-auto" />
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-center mt-10">
+          <Card className="border-none w-full md:w-2/5 order-1 md:order-2">
+            <CardContent>
+              <div>
+                <span className="text-[25px]">
+                  Excelência em Manutenção de Coleiros Müller Martini
+                </span>
+                <div>
+                  <br />
+                  <span className="text-lg text-[D3D3D3]">
+                    Na indústria gráfica, o acabamento de qualidade é essencial
+                    para a competitividade. Os coleiros Müller Martini são
+                    fundamentais nesse processo, oferecendo soluções precisas
+                    para a montagem de materiais impressos. Especializados na
+                    manutenção desses equipamentos, realizamos serviços
+                    preventivos e corretivos, ajustes e calibração, com peças
+                    originais e técnicas avançadas. Nosso objetivo é minimizar o
+                    tempo de inatividade e maximizar a produtividade, garantindo
+                    o alto padrão de qualidade no acabamento gráfico.
+                  </span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <div className="w-full md:w-2/5 mt-10 md:mt-0">
+            <div className="flex flex-row items-center justify-center gap-4">
+              <div className="w-full md:w-[48%]">
+                <img
+                  src={maquina4}
+                  alt="Manutencao"
+                  className="w-full h-[400px] object-contain"
+                />
+              </div>
+              <div className="w-full md:w-[48%]">
+                <img
+                  src={maquina5}
+                  alt="Manutencao"
+                  className="w-full h-[400px] object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
