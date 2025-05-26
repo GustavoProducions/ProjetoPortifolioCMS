@@ -16,7 +16,7 @@ export function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode fazer a requisição para autenticação
+    // Aqui você pode fazer a requisição para autenticação TESTEEEEEEE
     console.log({ email, password });
   };
 
